@@ -41,4 +41,19 @@ The dataset contains over 7000 records of vehicle data with 11 feature columns (
 - **Linear Regression**: R² Score
 - **Logistic Regression**: Accuracy
 
+## Getting Started
+
+1. Clone this repository.
+   ```bash
+   git clone https://github.com/yourusername/CO2-Emissions-Predictor.git
+
+2. Ensure the required libraries are installed (e.g., Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn).
+3. Run the main script to execute the analysis and modeling steps.
+
+## Authors
+1. Shahd Khaled Ahmed
+2. Alaa Albsuny
+3. Nahla Hesham
+4. Aliaa Adel
+5. Abdelrhman Tarek
 
