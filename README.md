@@ -45,7 +45,7 @@ The dataset contains over 7000 records of vehicle data with 11 feature columns (
 
 1. Clone this repository.
    ```bash
-   git clone https://github.com/yourusername/CO2-Emissions-Predictor.git
+   git clone https://github.com/shahdkh2288/CO2-Emissions-Predictor
 
 2. Ensure the required libraries are installed (e.g., Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn).
 3. Run the main script to execute the analysis and modeling steps.
