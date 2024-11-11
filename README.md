@@ -1,6 +1,6 @@
 # CO2-Emissions-Predictor
 
-This repository contains the code and resources for **Assignment 1** in the Machine Learning course at Cairo University, Faculty of Computers and Artificial Intelligence. The objective of this project is to use linear and logistic regression models to analyze and predict CO₂ emissions based on various vehicle features.
+This repository contains the code and resources for **Assignment 1** in the Machine Learning course. The objective of this project is to use linear and logistic regression models to analyze and predict CO₂ emissions based on various vehicle features.
 
 ## Project Overview
 
@@ -55,5 +55,5 @@ The dataset contains over 7000 records of vehicle data with 11 feature columns (
 2. Alaa Albsuny
 3. Nahla Hesham
 4. Aliaa Adel
-5. Moneim Tarek
+5. Abdelmonem Tarek
 
