@@ -48,7 +48,17 @@ The dataset contains over 7000 records of vehicle data with 11 feature columns (
    git clone https://github.com/shahdkh2288/CO2-Emissions-Predictor
 
 2. Ensure the required libraries are installed (e.g., Pandas, NumPy, Matplotlib, Seaborn, Scikit-Learn).
-3. Run the main script to execute the analysis and modeling steps.
+3. Run the preprocessing script:
+   ```bash
+   python DataProcessing.py
+4. Build the models:
+   To build the Logistic Regression model, run:
+   ```bash
+   python logisticModel.py
+5. To build the Linear Regression model, run:
+   ```bash
+   python linearRegressionModel.py
+
 
 ## Authors
 1. Shahd Khaled Ahmed
