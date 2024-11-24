@@ -4,7 +4,9 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+
+from sklearn.preprocessing import MaxAbsScaler, StandardScaler
+
 
 def load_and_process_data(file_path, target_column_class, target_column_emission, test_size=0.2, random_state=40):
 
@@ -60,16 +62,26 @@ def load_and_process_data(file_path, target_column_class, target_column_emission
     )
 
     # 3.4 Scale Numeric Features
-    scaler = StandardScaler()
-    X_train_scaled = scaler.fit_transform(X_train)
-    X_test_scaled = scaler.transform(X_test)
+    scaler_logistic = StandardScaler()
+    X_train_logistic = scaler_logistic.fit_transform(X_train)  # Features for logistic regression
+    X_test_logistic = scaler_logistic.transform(X_test)
+
+    scaler_linear = MaxAbsScaler()
+    X_train_linear = scaler_linear.fit_transform(X_train)  # Features for linear regression
+    X_test_linear = scaler_linear.transform(X_test)
 
     # Check and save the processed data
-    if not os.path.exists('X_train_scaled.csv'):
-        pd.DataFrame(X_train_scaled, columns=X.columns).to_csv('X_train_scaled.csv', index=False)
+    if not os.path.exists('X_train_logistic_scaled.csv'):
+        pd.DataFrame(X_train_logistic, columns=X.columns).to_csv('X_train_logistic_scaled.csv', index=False)
 
-    if not os.path.exists('X_test_scaled.csv'):
-        pd.DataFrame(X_test_scaled, columns=X.columns).to_csv('X_test_scaled.csv', index=False)
+    if not os.path.exists('X_test_logistic_scaled.csv'):
+        pd.DataFrame(X_test_logistic, columns=X.columns).to_csv('X_test_logistic_scaled.csv', index=False)
+
+    if not os.path.exists('X_train_linear_scaled.csv'):
+        pd.DataFrame(X_train_linear, columns=X.columns).to_csv('X_train_linear_scaled.csv', index=False)
+
+    if not os.path.exists('X_test_linear_scaled.csv'):
+        pd.DataFrame(X_test_linear, columns=X.columns).to_csv('X_test_linear_scaled.csv', index=False)
 
     if not os.path.exists('y_train_class.csv'):
         pd.DataFrame(y_train_class).to_csv('y_train_class.csv', index=False, header=['Emission Class'])
